@@ -1,0 +1,40 @@
+//$navbar-default-bg: #0275D8;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: gray;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: black;
+  text-decoration:none;
+}
+
+#home_jumbo{
+  background-image: asset-url("iphone-reverse-perspective-sized.jpg");
+  background-size: cover;
+  color : white; 
+  height: 550px;
+  color: black;
+}
+
+footer{
+  margin-top:45px;
+  padding-top: 5px;
+  border-top : 1pt solid gray;
+  color : 777;
+}
+
+footer a:hover{
+  color: #222;
+}
+
+footer small{
+  float: left;
+}
