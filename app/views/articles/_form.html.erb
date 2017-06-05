@@ -1,26 +1,16 @@
 
-<%= bootstrap_form_for(@article, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-      <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= bootstrap_form_for(@article, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10", label_errors: true) do |f| %>
+
+  <%= f.form_group do %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
   <% end %>
- 
+   
+  <%= f.text_field :title %>
+  <%= f.text_area :description, rows: 10 %>
+   
+  <%= f.form_group do %>
+    <%= f.primary %>
+  <% end %>
   
-    <%= f.text_field :title %>
-  
-  
-    <%= f.text_area :description, rows: 10 %>
-    
-    <%= f.form_group do %>
-      <%= f.primary %>
-    <% end %>
-  
- 
 <% end %>
   
