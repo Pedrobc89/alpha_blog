@@ -18,8 +18,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap_form'
 
 # Easy build bootstrap tables gem "bootstrap-table-rails"
-gem "bootstrap-table-rails"
+gem 'bootstrap-table-rails'
 
+# Devise is an authentication system
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
