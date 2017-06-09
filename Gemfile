@@ -17,7 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Easy form builder gem 'bootstrap_form' 
 gem 'bootstrap_form'
 
-
+# Easy build bootstrap tables gem "bootstrap-table-rails"
+gem "bootstrap-table-rails"
 
 
 # Use jquery as the JavaScript library

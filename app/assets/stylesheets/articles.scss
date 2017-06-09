@@ -1,3 +1,19 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-actions{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+  align: center;
+}
+
+.article-title{
+  font-weigth: bold;
+  font-size: 1.5em;
+}
+
+.article-description{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}

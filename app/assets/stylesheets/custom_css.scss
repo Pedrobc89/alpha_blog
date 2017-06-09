@@ -21,7 +21,10 @@
   background-size: cover;
   color : white; 
   height: 550px;
-  color: black;
+}
+
+#insideHome{
+  color: white !important;
 }
 
 footer{
@@ -39,12 +42,10 @@ footer small{
   float: left;
 }
 
-.article-actions{
-  border-top: 1px solid #eaeaea;
-  padding-top: 5px;
-  align: center;
-}
-
 .description{
   margin-top: 0;
 }
+
+// .white{
+//   color: white;
+// }
