@@ -13,7 +13,8 @@
   
   
   <%= f.form_group do %>
-    <%= f.submit "Sign up", class: "btn btn-primary" %>
+    
+    <%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-primary") %>
   <% end %>
   
 <% end %>
