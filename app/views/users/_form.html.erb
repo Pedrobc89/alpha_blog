@@ -1,25 +1,19 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= bootstrap_form_for(@user) do |f| %>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <%= f.form_group do %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+  <%= f.text_field :username, placeholder: "Enter your username..." %>
+
+  <%= f.email_field :email, placeholder: "example@example.com"%>
+  
+  <%= f.password_field :password%>
+  
+  
+  <%= f.form_group do %>
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
+  <% end %>
+  
 <% end %>
