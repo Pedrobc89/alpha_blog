@@ -20,12 +20,4 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def require_same_user(user)
-    debugger
-    if current_user != user
-      flash[:danger] = "You are note the same user"
-      redirect_to user_path(current_user)
-    end
-  end
-  
 end
