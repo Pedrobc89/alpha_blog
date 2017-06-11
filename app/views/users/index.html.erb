@@ -1,9 +1,9 @@
 cd .,<p id="notice"><%= notice %></p>
 
 <h1>Listing Users</h1>
-
-<% @users.each do |user| %>
-  <div align="center">
+<div align="center">
+  <%= will_paginate %>
+  <% @users.each do |user| %>
     <ul class="listing">
       <div class="row">
         <div class="well col-xs-4 col-xs-offset-4 center">
@@ -15,8 +15,9 @@ cd .,<p id="notice"><%= notice %></p>
         </div>
       </div>
     </ul>
-  </div>
-<% end %>
+  <% end %>
+  <%= will_paginate %>
+</div>
 
 <br>
 
