@@ -9,6 +9,11 @@
 <body>
 
 <%= render 'layouts/navigation'%>
+
+<p align="center">
+  <%= flash unless flash.blank? %>
+</p>
+
 <div class="container">
   <%= yield %>
 </div>

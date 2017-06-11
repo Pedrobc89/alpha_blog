@@ -1,0 +1,17 @@
+<h1 align="center">Log In</h1>
+
+<%= bootstrap_form_for(:session, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10", label_errors: true) do |f| %>
+
+  <%= f.form_group do %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false %>
+  <% end %>
+
+  <%= f.email_field :email, placeholder: "Enter email"%>
+  
+  <%= f.password_field :password, autocomplete: "off"%>
+  
+  <%= f.form_group do %>
+    <%= f.submit("Log In", class: "btn btn-primary") %>
+  <% end %>
+  
+<% end %>
