@@ -1,7 +1,7 @@
 <%= bootstrap_form_for(@category, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10", label_errors: true) do |f| %>
 
   <%= f.form_group do %>
-    <%= f.alert_message "Please fix the errors below.", error_summary: false, id: "error_explanation" %>
+    <%= f.alert_message "Please fix the errors below.", error_summary: false, class: "error_explanation alert alert-danger" %>
   <% end %>
   
   <%= f.text_field :name %>

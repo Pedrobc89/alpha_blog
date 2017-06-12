@@ -11,7 +11,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     
     assert_template 'categories/index'
     assert_match "test_category", response.body
-    assert_select '#error_explanation', false,  "This page should contain no errors"
+    assert_select '.error_explanation', false,  "This page should contain no errors"
   end
   
   
@@ -23,7 +23,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     end
     
     assert_template 'categories/new'
-    assert_select '#error_explanation'
+    assert_select '.error_explanation'
     
   end
   
