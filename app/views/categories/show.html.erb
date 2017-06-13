@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h2 align="center">
+  <strong>Title:</strong>
   <%= @category.name %>
-</p>
+</h2>
+
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
+<% if @category.articles.any? %>
+  <%= render 'articles/article', obj: @category_articles %>
+<% end %>
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

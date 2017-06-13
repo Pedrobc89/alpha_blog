@@ -9,7 +9,13 @@
   <h4 class="center description"><strong>Description:</strong></h4>
   <hr> 
   <%= simple_format(@article.description) %>
-  
+  <hr>
+  <div class="article-categories">
+    <% if @article.categories.any? %>
+      <p>Categories: <%= render @article.categories %></p>
+    <% end %>
+  </div>
+  <hr>
   <div class="center article-actions">
     <% if logged_in? && current_user == @article.user %>
       <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>

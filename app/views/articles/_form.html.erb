@@ -8,6 +8,9 @@
   <%= f.text_field :title %>
   <%= f.text_area :description, rows: 10, placeholder: "Enter some text" %>
   
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, inline: true, hide_label: true %>
+
+  
   <%= f.form_group do %>
     <%= f.primary %>
   <% end %>
